@@ -1,3 +1,4 @@
-copy here from
+copy here from into www/worldvent folder
+
 https://github.com/timothyekl/WorldVent-Documentation
 

@@ -4,7 +4,7 @@
 
 The architecture is based on template project from Android Studio Navigation template. The idea is to use webView showing html bundled in the app inside assets/www folder
 The www folder is not tracked by git and should be fetched from documentation repository, and copied into:
-app/src/main/assets/www
+app/src/main/assets/www/worldvent
 ### Documentation location
 https://github.com/timothyekl/WorldVent-Documentation
 
