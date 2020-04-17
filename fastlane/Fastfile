@@ -22,11 +22,16 @@ platform :android do
   end
 
   desc "Build And Deploy For Testers"
-  lane :testers do
-    puts "testers"
+  lane :testdeploy do
     # sh "your_script.sh"
     # You can also use other beta testing services here
-    # gradle(task: "clean assembleRelease")
+    gradle(task: "clean assembleRelease")
+    testupload
+  end
+
+  desc "Upload build to the server"
+  lane :testupload do
+    # sh "your_script.sh"
     scp(
         host: ENV["FASTLANE_UPLOAD_HOST"],
           username: ENV["FASTLANE_UPLOAD_USER"],
