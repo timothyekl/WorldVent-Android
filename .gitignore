@@ -1,6 +1,10 @@
 
 # Created by https://www.gitignore.io/api/linux,macos,android,androidstudio
 
+### WorldVent ###
+# Those files will be updated from the repository by 
+app/src/main/assets/www
+
 ### Android ###
 # Built application files
 *.apk

@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_worldvent">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.timekl.worldvent.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_worldvent"
+        android:name="com.timekl.worldvent.ui.worldwent.WorldVentFragment"
+        android:label="@string/nav_worldvent"
+        tools:layout="@layout/fragment_webview" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.timekl.worldvent.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_controls"
+        android:name="com.timekl.worldvent.ui.controls.ControlsFragment"
+        android:label="@string/nav_controls"
+        tools:layout="@layout/fragment_webview" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.timekl.worldvent.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_glossary"
+        android:name="com.timekl.worldvent.ui.glossary.GlossaryFragment"
+        android:label="@string/nav_glossary"
+        tools:layout="@layout/fragment_webview" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.timekl.worldvent.ui.settings.SettingsFragment"
+        android:label="@string/nav_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>
