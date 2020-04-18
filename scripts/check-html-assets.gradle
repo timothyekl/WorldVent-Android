@@ -1,0 +1,9 @@
+// check if we have html assets ready
+
+task checkHtmlAssets {
+    def assetsDir = "$project.rootDir/app/src/main/assets/www/worldvent"
+    def worldVentIndex = new File( "$assetsDir/index.html")
+    if (!worldVentIndex.exists()) {
+        throw new GradleException('Refer to README.me, where to copy html assets')
+    }
+}
