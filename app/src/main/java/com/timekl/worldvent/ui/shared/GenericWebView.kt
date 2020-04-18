@@ -19,7 +19,7 @@ class GenericWebView(context: Context?, attrs: AttributeSet?) : WebView(context,
             allowUniversalAccessFromFileURLs = true
         }
 
-        setBackgroundColor(0x000000)
+        setBackgroundColor(0x000523)
         setPadding(0,0,0,0)
         isFocusable = true
 
