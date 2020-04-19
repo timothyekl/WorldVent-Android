@@ -19,8 +19,8 @@ android {
         release {
             keyAlias System.getenv('ANDROID_KEY_ALIAS' ?: 'key')
             keyPassword System.getenv('ANDROID_KEY_PASSWORD' ?: 'pass')
-            storeFile file(System.getenv('ANDROID_KEY_PATH')  ?: '/path/to/key.jks')
-            storePassword System.getenv('ANDROID_STORE_PASSWORD'  ?: 'pass')
+            storeFile file(System.getenv('ANDROID_KEY_PATH') ?: '/path/to/key.jks')
+            storePassword System.getenv('ANDROID_STORE_PASSWORD' ?: 'pass')
         }
     }
 
@@ -48,7 +48,7 @@ dependencies {
     def okhhtpVersion = '3.14.1'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'com.google.android.material:material:1.1.0'
@@ -60,6 +60,7 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation 'androidx.preference:preference-ktx:1.1.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
 
     // http, json:

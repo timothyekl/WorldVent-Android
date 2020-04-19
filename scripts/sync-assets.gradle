@@ -1,0 +1,17 @@
+/*
+ * WorldVentAndroid
+ * sync-assets.gradle
+ * Created by Michal Bojanowicz on 2020/4/19
+ * Copyright (c) 2020. Michal Bojanowicz. All rights reserved
+ */
+
+// check if we have assets, if yes pull if not clone them
+
+task syncAssets {
+    def assetsDir = "$project.rootDir/app/src/main/assets/www/worldvent"
+    def clone = "git clone git@github.com:timothyekl/WorldVent-Documentation.git"
+    def worldVentIndex = new File( "$assetsDir/.git")
+//    if (!worldVentIndex.exists()) {
+//        throw new GradleException('GIT doesnt exits')
+//    }
+}

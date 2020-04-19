@@ -1,10 +1,16 @@
+/*
+ * WorldVentAndroid
+ * SettingsFragment.kt
+ * Created by Michal Bojanowicz on 2020/4/19
+ * Copyright (c) 2020. Michal Bojanowicz. All rights reserved
+ */
+
 package com.timekl.worldvent.ui.settings
 
 import android.os.Bundle
 import androidx.preference.*
 import com.timekl.worldvent.BuildConfig
 import com.timekl.worldvent.R
-
 
 class SettingsFragment: PreferenceFragmentCompat() {
 

@@ -1,3 +1,10 @@
+/*
+ * WorldVentAndroid
+ * check-html-assets.gradle
+ * Created by Michal Bojanowicz on 2020/4/19
+ * Copyright (c) 2020. Michal Bojanowicz. All rights reserved
+ */
+
 // check if we have html assets ready
 
 task checkHtmlAssets {
