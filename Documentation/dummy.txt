@@ -1,0 +1,1 @@
+We sync into this folder and during build phase we copy it into assets, without hidden files

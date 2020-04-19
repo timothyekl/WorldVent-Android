@@ -2,7 +2,9 @@
 # Created by https://www.gitignore.io/api/linux,macos,android,androidstudio
 
 ### WorldVent ###
-# Those files will be updated from the repository by 
+#This will be maintained by script and automatically git clone or git pull
+Documentation/WorldVent
+# Those files will be synced/copied from WorldVent-Documentation, they will not contain .git folder
 app/src/main/assets/www
 
 ### Android ###
