@@ -13,7 +13,7 @@ import retrofit2.http.GET
 
 interface Api {
 
-    @GET("wv/bulletin.json")
+    @GET("bulletins/index.json")
     fun getBulletin(): Call<Bulletin>
 
 }

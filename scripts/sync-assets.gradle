@@ -6,7 +6,7 @@
  */
 
 task syncAssets() {
-    println("syncAssets from gir repository")
+    println("syncing assets from git@github.com:timothyekl/WorldVent-Documentation.git")
     
     def stdout = new ByteArrayOutputStream()
     def repoSrc = "git@github.com:timothyekl/WorldVent-Documentation.git"
@@ -27,7 +27,7 @@ task syncAssets() {
     }
     println(stdout.toString().trim())
 
-    println('copyAssets into app assets folder')
+    println('copying assets into app assets folder')
     def src = "$project.rootDir/Documentation/worldvent"
     def destination = "$project.rootDir/app/src/main/assets/www"
     def destinationFile = new File(destination)

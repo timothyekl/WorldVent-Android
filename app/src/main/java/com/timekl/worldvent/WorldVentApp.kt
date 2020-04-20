@@ -18,7 +18,7 @@ class WorldVentApp: Application() {
         super.onCreate()
         instance = this
         preferences = Preferences(this)
-        val api = NetworkInjection.provideApi("https://borama.co")
+        val api = NetworkInjection.provideApi("https://worldvent.timekl.com")
         networkClient = NetworkClient(api)
     }
 
