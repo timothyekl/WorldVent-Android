@@ -3,7 +3,7 @@
 
 ### WorldVent ###
 #This will be maintained by script and automatically git clone or git pull
-Documentation/WorldVent
+Documentation/worldvent
 # Those files will be synced/copied from WorldVent-Documentation, they will not contain .git folder
 app/src/main/assets/www
 
