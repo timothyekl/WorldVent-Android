@@ -5,13 +5,52 @@
  * Copyright (c) 2020. Michal Bojanowicz. All rights reserved
  */
 
-// check if we have assets, if yes pull if not clone them
+task syncAssets() {
+    println("syncAssets from gir repository")
+    
+    def stdout = new ByteArrayOutputStream()
+    def repoSrc = "git@github.com:timothyekl/WorldVent-Documentation.git"
+    def repoDir = "$project.rootDir/Documentation/worldvent"
+    def repoGit = new File("$repoDir/.git")
 
-task syncAssets {
+    if (!repoGit.exists()) {
+        exec {
+            commandLine 'git', 'clone', repoSrc, repoDir
+            standardOutput = stdout
+        }
+    } else {
+        exec {
+            workingDir repoDir
+            commandLine 'git', 'pull'
+            errorOutput = stdout
+        }
+    }
+    println(stdout.toString().trim())
+
+    println('copyAssets into app assets folder')
+    def src = "$project.rootDir/Documentation/worldvent"
+    def destination = "$project.rootDir/app/src/main/assets/www"
+    def destinationFile = new File(destination)
+
+    if (!destinationFile.exists()) {
+        exec {
+            commandLine 'mkdir', '-p', destination
+        }
+    }
+
+    exec {
+        commandLine 'rsync', '-rtv', '--exclude', '.*', src, destination
+        errorOutput = stdout
+    }
+
+    println(stdout.toString().trim())
+
+    println("assert assets are copied")
+
     def assetsDir = "$project.rootDir/app/src/main/assets/www/worldvent"
-    def clone = "git clone git@github.com:timothyekl/WorldVent-Documentation.git"
-    def worldVentIndex = new File( "$assetsDir/.git")
-//    if (!worldVentIndex.exists()) {
-//        throw new GradleException('GIT doesnt exits')
-//    }
+    def worldVentIndex = new File("$assetsDir/index.html")
+    if (!worldVentIndex.exists()) {
+        throw new GradleException('Refer to README.me, where to copy html assets')
+    }
+    println("Synchronized documentation")
 }
